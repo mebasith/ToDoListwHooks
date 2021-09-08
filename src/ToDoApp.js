@@ -28,8 +28,13 @@ export default function ToDoApp(){
                 <Typography color="inherit">TODOS WITH HOOKS</Typography>
             </Toolbar>
         </AppBar>
-        <ToDoForm addTodo={addTodo}/>
-        <ToDoList todos={todos}/>
+        <Grid container justifyContent="center" style={{marginTop:"1rem"}}>
+            <Grid item xs={10} md={8} lg={4}>
+                <ToDoForm addTodo={addTodo}/>
+                <ToDoList todos={todos}/>
+            </Grid>
+        </Grid>
+        
         </Paper>
     )
 }

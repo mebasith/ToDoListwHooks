@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Fragment} from "react"
 import {Paper, List, Divider, ListItem, ListItemText} from "@material-ui/core"
 
 
@@ -9,12 +9,12 @@ export default function ToDoList(props){
             
             <List>
             {props.todos.map(todo=>(
-                <>
-                <ListItem key={todo.id}>
+                <Fragment key={todo.id}>
+                <ListItem >
                     <ListItemText>{todo.task}</ListItemText>
                 </ListItem> 
                  <Divider/> 
-                 </>
+                 </Fragment>
             )
             )}
             </List>
